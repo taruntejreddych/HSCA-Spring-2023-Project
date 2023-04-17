@@ -1,0 +1,81 @@
+// commandline options and file lists
+// Yipeng Wang
+// 10/18/22
+// ----------------------------------
+
+// Acceleration options, check doc before using
+// -caxl
+// +speedup
+
+
+// overwrite timescale (comment out if you do not want)
+-timescale=1n/10p
+
+// SystemVerilog flag, if you are using Systemverilog
+// Note that SystemVerilog is back compatable with Verilog
+-sverilog
+
+
+// -y with folder, which contains source files
+// -y models2
+
+// -v with Verilog or SystemVerilog files
+-sv
+//lib1
+// List your files here -------------
+
+//complement_2.sv
+//complement_2_24.sv
+//mux_24b.sv
+//mux_8b.sv
+//mux.sv
+//sub_r.sv
+//bs.sv
+//adder.sv
+//tb.sv
+
+//adder_ks/black.sv
+//adder_ks/grey.sv
+//adder_ks/ks_1.sv
+//adder_ks/ks_2.sv
+//adder_ks/ks_3.sv
+//adder_ks/ks_4.sv
+//adder_ks/ks_5.sv
+//adder_ks/ks_6.sv
+//adder_ks/ks_7.sv
+//adder_ks/ksa_top.sv
+//adder_ks/pg.sv
+//
+//cla/cla.sv
+//cla/cla_4.sv
+//
+
+
+
+
+
+
+
+top.sv
+tb_top.sv
+
+//top_div_opt1.sv
+//tb_div.sv
+
+
+
+
+
+
+
+//
+//
+////multiplier/radix_2_booth.v
+////multiplier/radix_2_booth_2.v
+//multiplier/radix_4_booth.v
+//multiplier/radix_4_booth_2.v
+//multiplier/operand_manip_mul.sv
+//
+//division/div.sv
+//division/div_top.sv
+//
