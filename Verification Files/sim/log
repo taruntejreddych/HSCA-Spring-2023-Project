@@ -1,0 +1,1949 @@
+Reading pref.tcl
+
+# 10.6
+
+# do run.do
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:58:25 on Dec 05,2022
+# vlog ../dut/top.sv ../lib/gscl45nm.v 
+# -- Compiling module FPalu
+# -- Compiling module cla
+# -- Compiling module cla_4
+# -- Compiling module BarrelShifter
+# -- Compiling module Complement2s
+# -- Compiling module Comp_24
+# -- Compiling module Sub_Result
+# -- Compiling module Mux24
+# -- Compiling module Mux_8
+# -- Compiling module Mux
+# -- Compiling module FP_Adder_Sub
+# -- Compiling module black
+# -- Compiling module grey
+# -- Compiling module ks_1
+# -- Compiling module ks_2
+# -- Compiling module ks_3
+# -- Compiling module ks_4
+# -- Compiling module ks_5
+# -- Compiling module ks_6
+# -- Compiling module ks_7
+# -- Compiling module ksa_top
+# -- Compiling module pg
+# -- Compiling module PARTIALPRODUCT
+# -- Compiling module BOOTH_16_BIT
+# -- Compiling module operand_man
+# -- Compiling module div
+# -- Compiling module div_top
+# -- Compiling module AND2X1
+# -- Compiling module AND2X2
+# -- Compiling module AOI21X1
+# -- Compiling module AOI22X1
+# -- Compiling module BUFX2
+# -- Compiling module BUFX4
+# -- Compiling module CLKBUF1
+# -- Compiling module CLKBUF2
+# -- Compiling module CLKBUF3
+# -- Compiling module DFFNEGX1
+# -- Compiling module DFFPOSX1
+# -- Compiling module DFFSR
+# -- Compiling module FAX1
+# -- Compiling module HAX1
+# -- Compiling module INVX1
+# -- Compiling module INVX2
+# -- Compiling module INVX4
+# -- Compiling module INVX8
+# -- Compiling module LATCH
+# -- Compiling module MUX2X1
+# -- Compiling module NAND2X1
+# -- Compiling module NAND3X1
+# -- Compiling module NOR2X1
+# -- Compiling module NOR3X1
+# -- Compiling module OAI21X1
+# -- Compiling module OAI22X1
+# -- Compiling module OR2X1
+# -- Compiling module OR2X2
+# -- Compiling module TBUFX1
+# -- Compiling module TBUFX2
+# -- Compiling module XNOR2X1
+# -- Compiling module XOR2X1
+# -- Compiling UDP udp_dff
+# -- Compiling UDP udp_tlat
+# -- Compiling UDP udp_rslat
+# -- Compiling UDP udp_mux2
+# 
+# Top level modules:
+# 	FPalu
+# 	cla
+# 	AND2X1
+# 	AND2X2
+# 	AOI21X1
+# 	AOI22X1
+# 	BUFX2
+# 	BUFX4
+# 	CLKBUF1
+# 	CLKBUF2
+# 	CLKBUF3
+# 	DFFNEGX1
+# 	DFFPOSX1
+# 	DFFSR
+# 	FAX1
+# 	HAX1
+# 	INVX1
+# 	INVX2
+# 	INVX4
+# 	INVX8
+# 	LATCH
+# 	MUX2X1
+# 	NAND2X1
+# 	NAND3X1
+# 	NOR2X1
+# 	NOR3X1
+# 	OAI21X1
+# 	OAI22X1
+# 	OR2X1
+# 	OR2X2
+# 	TBUFX1
+# 	TBUFX2
+# 	XNOR2X1
+# 	XOR2X1
+# End time: 00:58:25 on Dec 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:58:25 on Dec 05,2022
+# vlog "+cover" -sv ../tb/interfaces.sv ../tb/sequences.sv ../tb/coverage.sv ../tb/scoreboard.sv ../tb/modules.sv ../tb/tests.sv ../tb/tb.sv 
+# -- Compiling interface dut_interface_in
+# -- Compiling interface dut_interface_out
+# ** Note: (vlog-2286) ../tb/sequences.sv(1): Using implicit +incdir+/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package sequences
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling package coverage
+# -- Importing package sequences
+# -- Compiling package scoreboard
+# ** Warning: ../tb/scoreboard.sv(304): (vlog-2240) Treating stand-alone use of function 'goldenoutput' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(363): (vlog-2240) Treating stand-alone use of function 'compare_outputs' as an implicit VOID cast.
+# -- Compiling package modules_pkg
+# -- Importing package coverage
+# -- Importing package scoreboard
+# -- Compiling package tests
+# -- Importing package modules_pkg
+# -- Compiling package tb_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Importing package modules_pkg
+# -- Importing package sequences
+# -- Importing package coverage
+# -- Importing package scoreboard
+# -- Importing package tests
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 00:58:26 on Dec 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# vsim -coverage -c top 
+# Start time: 00:58:26 on Dec 05,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../tb/tb.sv(58): (vopt-2241) Connection width does not match width of port 'opcode'. The port definition is at: ../dut/top.sv(4).
+# ** Warning: ../tb/tb.sv(58): (vopt-2685) [TFMPC] - Too few port connections for 'alu'.  Expected 15, found 12.
+# ** Warning: ../tb/tb.sv(58): (vopt-2718) [TFMPC] - Missing connection for port 'valid'.
+# ** Warning: ../tb/tb.sv(58): (vopt-2718) [TFMPC] - Missing connection for port 'busy'.
+# ** Warning: ../tb/tb.sv(58): (vopt-2718) [TFMPC] - Missing connection for port 'Cout'.
+# ** Warning: ../tb/scoreboard.sv(304): (vopt-2240) Treating stand-alone use of function 'goldenoutput' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(363): (vopt-2240) Treating stand-alone use of function 'compare_outputs' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(54): (vopt-2250) Function "goldenoutput" has no return value assignment.
+# ** Warning: ../tb/scoreboard.sv(290): (vopt-2250) Function "compare_outputs" has no return value assignment.
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 3.10.0-1160.76.1.el7.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_interface_in(fast)
+# Loading work.dut_interface_out(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.sequences(fast)
+# Loading work.scoreboard(fast)
+# Loading work.coverage(fast)
+# Loading work.modules_pkg(fast)
+# Loading work.tests(fast)
+# Loading work.tb_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.FPalu(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3015) ../tb/tb.sv(58): [PCDPC] - Port size (3) does not match connection size (5) for port 'opcode'. The port definition is at: ../dut/top.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top/alu File: ../dut/top.sv
+# ** Warning: (vsim-3764) ../tb/sequences.sv(92): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ps  Iteration: 0  Region: /sequences::float_alu_random_sequence File: ../tb/sequences.sv
+# Loading /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test float_alu_test...
+# in driver A = 11000011101111011000000101001100 B = 11000010101011011011110101001000 opcode = 011 CIN = 0 @                    0
+# 
+# in in_mon A = 11000011101111011000000101001100 B = 11000010101011011011110101001000 opcode = 011 CIN = 0 @                    2
+# 
+# in out_mon VOUT = 0 OUT = 408b9d7a underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  100
+# 
+# oper_A = -379.010132 input A = 11000011101111011000000101001100
+# 
+# oper_B = -86.869690 input B = 11000010101011011011110101001000
+# 
+# out_dut = 4.362973 out = 01000000100010111001110101111010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -379.01013183593750000000000000000000000000 B = -86.86968994140625000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 4.36297323141800585943883561412803828716 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 4.36297321319580078125000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000010011010110110010100011100 B = 01000001001010100001100010101010 opcode = 011 CIN = 0 @                  100
+# 
+# in in_mon A = 01000010011010110110010100011100 B = 01000001001010100001100010101010 opcode = 011 CIN = 0 @                  102
+# 
+# in out_mon VOUT = 0 OUT = 40b1235e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  200
+# 
+# oper_A = 58.848740 input A = 01000010011010110110010100011100
+# 
+# oper_B = 10.631021 input B = 01000001001010100001100010101010
+# 
+# out_dut = 5.535567 out = 01000000101100010010001101011110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 58.84873962402343750000000000000000000000 B = 10.63102149963378906250000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 5.53556773693389914114959537982940673828 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 5.53556728363037109375000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011101010100100101111101101 B = 01000001000000010011101100001100 opcode = 011 CIN = 0 @                  200
+# 
+# in in_mon A = 01000011101010100100101111101101 B = 01000001000000010011101100001100 opcode = 011 CIN = 0 @                  202
+# 
+# in out_mon VOUT = 0 OUT = 4228acc4 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  300
+# 
+# oper_A = 340.593170 input A = 01000011101010100100101111101101
+# 
+# oper_B = 8.076916 input B = 01000001000000010011101100001100
+# 
+# out_dut = 42.168716 out = 01000010001010001010110011000100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 340.59317016601562500000000000000000000000 B = 8.07691574096679687500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 42.16871651124183273395829019136726856232 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 42.16871643066406250000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000010101001100001010111111 B = 11000001011110010010111001010100 opcode = 011 CIN = 0 @                  300
+# 
+# in in_mon A = 11000000010101001100001010111111 B = 11000001011110010010111001010100 opcode = 011 CIN = 0 @                  302
+# 
+# in out_mon VOUT = 0 OUT = 3e5a9544 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  400
+# 
+# oper_A = -3.324386 input A = 11000000010101001100001010111111
+# 
+# oper_B = -15.573811 input B = 11000001011110010010111001010100
+# 
+# out_dut = 0.213460 out = 00111110010110101001010101000100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -3.32438635826110839843750000000000000000 B = -15.57381057739257812500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.21346004831257481271222786745056509972 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.21346002817153930664062500000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000010010011111111111101001110 B = 01000000010000001110101011110101 opcode = 011 CIN = 0 @                  400
+# 
+# in in_mon A = 01000010010011111111111101001110 B = 01000000010000001110101011110101 opcode = 011 CIN = 0 @                  402
+# 
+# in out_mon VOUT = 0 OUT = 418a0152 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  500
+# 
+# oper_A = 51.999321 input A = 01000010010011111111111101001110
+# 
+# oper_B = 3.014341 input B = 01000000010000001110101011110101
+# 
+# out_dut = 17.250645 out = 01000001100010100000000101010010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 51.99932098388671875000000000000000000000 B = 3.01434063911437988281250000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 17.25064523535874627668817993253469467163 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 17.25064468383789062500000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011101001100001110011011010 B = 11000001001001010001111011000000 opcode = 011 CIN = 0 @                  500
+# 
+# in in_mon A = 01000011101001100001110011011010 B = 11000001001001010001111011000000 opcode = 011 CIN = 0 @                  502
+# 
+# in out_mon VOUT = 0 OUT = c200c4fa underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  600
+# 
+# oper_A = 332.225403 input A = 01000011101001100001110011011010
+# 
+# oper_B = -10.320007 input B = 11000001001001010001111011000000
+# 
+# out_dut = -32.192360 out = 11000010000000001100010011111010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 332.22540283203125000000000000000000000000 B = -10.32000732421875000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -32.19236114807520721114997286349534988403 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -32.19235992431640625000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 10111111101011101110001110011000 B = 11000001001110001000000001000001 opcode = 011 CIN = 0 @                  600
+# 
+# in in_mon A = 10111111101011101110001110011000 B = 11000001001110001000000001000001 opcode = 011 CIN = 0 @                  602
+# 
+# in out_mon VOUT = 0 OUT = 3df2a9c4 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  700
+# 
+# oper_A = -1.366321 input A = 10111111101011101110001110011000
+# 
+# oper_B = -11.531312 input B = 11000001001110001000000001000001
+# 
+# out_dut = 0.118488 out = 00111101111100101010100111000100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -1.36632061004638671875000000000000000000 B = -11.53131198883056640625000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.11848787123007591126633286648939247243 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.11848786473274230957031250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000010100011111010000101000101 B = 11000011111000110010011100111111 opcode = 011 CIN = 0 @                  700
+# 
+# in in_mon A = 11000010100011111010000101000101 B = 11000011111000110010011100111111 opcode = 011 CIN = 0 @                  702
+# 
+# in out_mon VOUT = 0 OUT = 3e21deac underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  800
+# 
+# oper_A = -71.814980 input A = 11000010100011111010000101000101
+# 
+# oper_B = -454.306610 input B = 11000011111000110010011100111111
+# 
+# out_dut = 0.158076 out = 00111110001000011101111010101100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -71.81497955322265625000000000000000000000 B = -454.30661010742187500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.15807601728762396553484848027437692508 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.15807598829269409179687500000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011010111111111111000101001 B = 11000010001110010000100011101001 opcode = 011 CIN = 0 @                  800
+# 
+# in in_mon A = 01000011010111111111111000101001 B = 11000010001110010000100011101001 opcode = 011 CIN = 0 @                  802
+# 
+# in out_mon VOUT = 0 OUT = c09af31c underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                  900
+# 
+# oper_A = 223.992813 input A = 01000011010111111111111000101001
+# 
+# oper_B = -46.258701 input B = 11000010001110010000100011101001
+# 
+# out_dut = -4.842176 out = 11000000100110101111001100011100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 223.99281311035156250000000000000000000000 B = -46.25870132446289062500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -4.84217685964084587624256528215482831001 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -4.84217643737792968750000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001110111011011100010000000 B = 01000001000010000010001011101010 opcode = 011 CIN = 0 @                  900
+# 
+# in in_mon A = 01000001110111011011100010000000 B = 01000001000010000010001011101010 opcode = 011 CIN = 0 @                  902
+# 
+# in out_mon VOUT = 0 OUT = 40507820 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1000
+# 
+# oper_A = 27.715088 input A = 01000001110111011011100010000000
+# 
+# oper_B = 8.508524 input B = 01000001000010000010001011101010
+# 
+# out_dut = 3.257332 out = 01000000010100000111100000100000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 27.71508789062500000000000000000000000000 B = 8.50852394104003906250000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 3.25733206872039993129419599426910281181 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 3.25733184814453125000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001110001110010111101010011 B = 01000000011111010001111101101110 opcode = 011 CIN = 0 @                 1000
+# 
+# in in_mon A = 01000001110001110010111101010011 B = 01000000011111010001111101101110 opcode = 011 CIN = 0 @                 1002
+# 
+# in out_mon VOUT = 0 OUT = 40c972f0 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1100
+# 
+# oper_A = 24.898108 input A = 01000001110001110010111101010011
+# 
+# oper_B = 3.955043 input B = 01000000011111010001111101101110
+# 
+# out_dut = 6.295280 out = 01000000110010010111001011110000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 24.89810752868652343750000000000000000000 B = 3.95504331588745117187500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 6.29528061770412517006434427457861602306 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 6.29528045654296875000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000010001001000011001111011010 B = 01000010101111010001100110001100 opcode = 011 CIN = 0 @                 1100
+# 
+# in in_mon A = 01000010001001000011001111011010 B = 01000010101111010001100110001100 opcode = 011 CIN = 0 @                 1102
+# 
+# in out_mon VOUT = 0 OUT = 3ede4b66 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1200
+# 
+# oper_A = 41.050636 input A = 01000010001001000011001111011010
+# 
+# oper_B = 94.549896 input B = 01000010101111010001100110001100
+# 
+# out_dut = 0.434169 out = 00111110110111100100101101100110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 41.05063629150390625000000000000000000000 B = 94.54989624023437500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.43416902528588274812193503748858347535 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.43416899442672729492187500000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001000110011101100100111101 B = 01000001010011001001110100100111 opcode = 011 CIN = 0 @                 1200
+# 
+# in in_mon A = 01000001000110011101100100111101 B = 01000001010011001001110100100111 opcode = 011 CIN = 0 @                 1202
+# 
+# in out_mon VOUT = 0 OUT = 3f407c54 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1300
+# 
+# oper_A = 9.615537 input A = 01000001000110011101100100111101
+# 
+# oper_B = 12.788367 input B = 01000001010011001001110100100111
+# 
+# out_dut = 0.751897 out = 00111111010000000111110001010100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 9.61553668975830078125000000000000000000 B = 12.78836727142333984375000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.75189713320519102612848882927210070193 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.75189709663391113281250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011001010101000110111010000 B = 01000011101010110100000000010110 opcode = 011 CIN = 0 @                 1300
+# 
+# in in_mon A = 11000011001010101000110111010000 B = 01000011101010110100000000010110 opcode = 011 CIN = 0 @                 1302
+# 
+# in out_mon VOUT = 0 OUT = befef580 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1400
+# 
+# oper_A = -170.553955 input A = 11000011001010101000110111010000
+# 
+# oper_B = 342.500671 input B = 01000011101010110100000000010110
+# 
+# out_dut = -0.497967 out = 10111110111111101111010110000000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -170.55395507812500000000000000000000000000 B = 342.50067138671875000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.49796677591195698253656587439763825387 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.49796676635742187500000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 00111111111000110011110100010100 B = 01000000110000100001111101101011 opcode = 011 CIN = 0 @                 1400
+# 
+# in in_mon A = 00111111111000110011110100010100 B = 01000000110000100001111101101011 opcode = 011 CIN = 0 @                 1402
+# 
+# in out_mon VOUT = 0 OUT = 3e95d5f8 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1500
+# 
+# oper_A = 1.775301 input A = 00111111111000110011110100010100
+# 
+# oper_B = 6.066335 input B = 01000000110000100001111101101011
+# 
+# out_dut = 0.292648 out = 00111110100101011101010111111000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 1.77530145645141601562500000000000000000 B = 6.06633520126342773437500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.29264809766556854064845083485124632716 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.29264807701110839843750000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001101101111111001010000010 B = 11000000010010000110001111111000 opcode = 011 CIN = 0 @                 1500
+# 
+# in in_mon A = 11000001101101111111001010000010 B = 11000000010010000110001111111000 opcode = 011 CIN = 0 @                 1502
+# 
+# in out_mon VOUT = 0 OUT = 40eafe62 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1600
+# 
+# oper_A = -22.993412 input A = 11000001101101111111001010000010
+# 
+# oper_B = -3.131102 input B = 11000000010010000110001111111000
+# 
+# out_dut = 7.343553 out = 01000000111010101111111001100010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -22.99341201782226562500000000000000000000 B = -3.13110160827636718750000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 7.34355345002037651624959835316985845566 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 7.34355258941650390625000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001000111011101010000000010 B = 11000000011101101110010101011010 opcode = 011 CIN = 0 @                 1600
+# 
+# in in_mon A = 01000001000111011101010000000010 B = 11000000011101101110010101011010 opcode = 011 CIN = 0 @                 1602
+# 
+# in out_mon VOUT = 0 OUT = c023a5de underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1700
+# 
+# oper_A = 9.864260 input A = 01000001000111011101010000000010
+# 
+# oper_B = -3.857749 input B = 11000000011101101110010101011010
+# 
+# out_dut = -2.556999 out = 11000000001000111010010111011110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 9.86425971984863281250000000000000000000 B = -3.85774850845336914062500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -2.55699916628400591989134227333124727011 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -2.55699872970581054687500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 10111111100000011001101001000011 B = 01000010011110000101010101110100 opcode = 011 CIN = 0 @                 1700
+# 
+# in in_mon A = 10111111100000011001101001000011 B = 01000010011110000101010101110100 opcode = 011 CIN = 0 @                 1702
+# 
+# in out_mon VOUT = 0 OUT = bc859a7e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1800
+# 
+# oper_A = -1.012520 input A = 10111111100000011001101001000011
+# 
+# oper_B = 62.083450 input B = 01000010011110000101010101110100
+# 
+# out_dut = -0.016309 out = 10111100100001011001101001111110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -1.01252019405364990234375000000000000000 B = 62.08345031738281250000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.01630901937436542853410159636950993445 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.01630901917815208435058593750000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000110000001111110000110101 B = 10111111100010011000101111100001 opcode = 011 CIN = 0 @                 1800
+# 
+# in in_mon A = 11000000110000001111110000110101 B = 10111111100010011000101111100001 opcode = 011 CIN = 0 @                 1802
+# 
+# in out_mon VOUT = 0 OUT = 40b3974f underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 1900
+# 
+# oper_A = -6.030787 input A = 11000000110000001111110000110101
+# 
+# oper_B = -1.074581 input B = 10111111100010011000101111100001
+# 
+# out_dut = 5.612220 out = 01000000101100111001011101001111
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -6.03078699111938476562500000000000000000 B = -1.07458126544952392578125000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 5.61222048534091744187435324420221149921 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 5.61222028732299804687500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011110100101001000001111100 B = 11000000000101011101000111001001 opcode = 011 CIN = 0 @                 1900
+# 
+# in in_mon A = 11000011110100101001000001111100 B = 11000000000101011101000111001001 opcode = 011 CIN = 0 @                 1902
+# 
+# in out_mon VOUT = 0 OUT = 4333e5eb underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2000
+# 
+# oper_A = -421.128784 input A = 11000011110100101001000001111100
+# 
+# oper_B = -2.340929 input B = 11000000000101011101000111001001
+# 
+# out_dut = 179.898117 out = 01000011001100111110010111101011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -421.12878417968750000000000000000000000000 B = -2.34092926979064941406250000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 179.89812405453380961262155324220657348633 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 179.89811706542968750000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001010000000111101001101000 B = 01000011111110111011011111011110 opcode = 011 CIN = 0 @                 2000
+# 
+# in in_mon A = 11000001010000000111101001101000 B = 01000011111110111011011111011110 opcode = 011 CIN = 0 @                 2002
+# 
+# in out_mon VOUT = 0 OUT = bcc3c092 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2100
+# 
+# oper_A = -12.029884 input A = 11000001010000000111101001101000
+# 
+# oper_B = 503.436462 input B = 01000011111110111011011111011110
+# 
+# out_dut = -0.023896 out = 10111100110000111100000010010010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -12.02988433837890625000000000000000000000 B = 503.43646240234375000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.02389553645155858066506660009054030525 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.02389553561806678771972656250000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001110100010111011100110001 B = 11000001110100100110110010111011 opcode = 011 CIN = 0 @                 2100
+# 
+# in in_mon A = 11000001110100010111011100110001 B = 11000001110100100110110010111011 opcode = 011 CIN = 0 @                 2102
+# 
+# in out_mon VOUT = 0 OUT = 3f7ed546 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2200
+# 
+# oper_A = -26.183199 input A = 11000001110100010111011100110001
+# 
+# oper_B = -26.303091 input B = 11000001110100100110110010111011
+# 
+# out_dut = 0.995442 out = 00111111011111101101010101000110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -26.18319892883300781250000000000000000000 B = -26.30309104919433593750000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.99544189996008092258250599115854129195 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.99544179439544677734375000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011011101011011101010111010 B = 11000011010011101101100110110010 opcode = 011 CIN = 0 @                 2200
+# 
+# in in_mon A = 01000011011101011011101010111010 B = 11000011010011101101100110110010 opcode = 011 CIN = 0 @                 2202
+# 
+# in out_mon VOUT = 0 OUT = bf980efb underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2300
+# 
+# oper_A = 245.729401 input A = 01000011011101011011101010111010
+# 
+# oper_B = -206.850372 input B = 11000011010011101101100110110010
+# 
+# out_dut = -1.187957 out = 10111111100110000000111011111011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 245.72940063476562500000000000000000000000 B = -206.85037231445312500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -1.18795725569789523135000308684539049864 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -1.18795716762542724609375000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000101011110011010100001110 B = 11000001011111110010110110011000 opcode = 011 CIN = 0 @                 2300
+# 
+# in in_mon A = 01000000101011110011010100001110 B = 11000001011111110010110110011000 opcode = 011 CIN = 0 @                 2302
+# 
+# in out_mon VOUT = 0 OUT = beafc584 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2400
+# 
+# oper_A = 5.475226 input A = 01000000101011110011010100001110
+# 
+# oper_B = -15.948631 input B = 11000001011111110010110110011000
+# 
+# out_dut = -0.343304 out = 10111110101011111100010110000100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 5.47522640228271484375000000000000000000 B = -15.94863128662109375000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.34330384243541606226202134166669566184 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.34330379962921142578125000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011001101101010000111101000 B = 01000000110101100010011101011101 opcode = 011 CIN = 0 @                 2400
+# 
+# in in_mon A = 11000011001101101010000111101000 B = 01000000110101100010011101011101 opcode = 011 CIN = 0 @                 2402
+# 
+# in out_mon VOUT = 0 OUT = c1da51be underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2500
+# 
+# oper_A = -182.632446 input A = 11000011001101101010000111101000
+# 
+# oper_B = 6.692305 input B = 01000000110101100010011101011101
+# 
+# out_dut = -27.289913 out = 11000001110110100101000110111110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -182.63244628906250000000000000000000000000 B = 6.69230508804321289062500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -27.28991638701024413649065536446869373322 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -27.28991317749023437500000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000010001000011101011101101011 B = 11000010011010101011011001000111 opcode = 011 CIN = 0 @                 2500
+# 
+# in in_mon A = 01000010001000011101011101101011 B = 11000010011010101011011001000111 opcode = 011 CIN = 0 @                 2502
+# 
+# in out_mon VOUT = 0 OUT = bf30852c underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2600
+# 
+# oper_A = 40.460369 input A = 01000010001000011101011101101011
+# 
+# oper_B = -58.678005 input B = 11000010011010101011011001000111
+# 
+# out_dut = -0.689532 out = 10111111001100001000010100101100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 40.46036911010742187500000000000000000000 B = -58.67800521850585937500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.68953211615562959302394574478967115283 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.68953204154968261718750000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000010000000100111000110100 B = 01000011000011000111001100001010 opcode = 011 CIN = 0 @                 2600
+# 
+# in in_mon A = 11000000010000000100111000110100 B = 01000011000011000111001100001010 opcode = 011 CIN = 0 @                 2602
+# 
+# in out_mon VOUT = 0 OUT = bcaf4275 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2700
+# 
+# oper_A = -3.004773 input A = 11000000010000000100111000110100
+# 
+# oper_B = 140.449371 input B = 01000011000011000111001100001010
+# 
+# out_dut = -0.021394 out = 10111100101011110100001001110101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -3.00477313995361328125000000000000000000 B = 140.44937133789062500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.02139399494159915579571951127491047373 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.02139399386942386627197265625000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000001100101111101111100111 B = 11000010010000111110111001110011 opcode = 011 CIN = 0 @                 2700
+# 
+# in in_mon A = 11000000001100101111101111100111 B = 11000010010000111110111001110011 opcode = 011 CIN = 0 @                 2702
+# 
+# in out_mon VOUT = 0 OUT = 3d69db56 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2800
+# 
+# oper_A = -2.796625 input A = 11000000001100101111101111100111
+# 
+# oper_B = -48.982861 input B = 11000010010000111110111001110011
+# 
+# out_dut = 0.057094 out = 00111101011010011101101101010110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -2.79662489891052246093750000000000000000 B = -48.98286056518554687500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.05709394810025074373793785298403236084 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.05709394067525863647460937500000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001111101111001110101011011 B = 11000000110111000011010100110011 opcode = 011 CIN = 0 @                 2800
+# 
+# in in_mon A = 11000001111101111001110101011011 B = 11000000110111000011010100110011 opcode = 011 CIN = 0 @                 2802
+# 
+# in out_mon VOUT = 0 OUT = 408fee46 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 2900
+# 
+# oper_A = -30.951834 input A = 11000001111101111001110101011011
+# 
+# oper_B = -6.881494 input B = 11000000110111000011010100110011
+# 
+# out_dut = 4.497836 out = 01000000100011111110111001000110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 2900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -30.95183372497558593750000000000000000000 B = -6.88149404525756835937500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 4.49783630145059376559402153361588716507 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 4.49783611297607421875000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000011000000100111111101000 B = 01000000001110101000000100110110 opcode = 011 CIN = 0 @                 2900
+# 
+# in in_mon A = 11000000011000000100111111101000 B = 01000000001110101000000100110110 opcode = 011 CIN = 0 @                 2902
+# 
+# in out_mon VOUT = 0 OUT = bf99f295 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3000
+# 
+# oper_A = -3.504877 input A = 11000000011000000100111111101000
+# 
+# oper_B = 2.914136 input B = 01000000001110101000000100110110
+# 
+# out_dut = -1.202716 out = 10111111100110011111001010010101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -3.50487709045410156250000000000000000000 B = 2.91413640975952148437500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -1.20271552104293188989458940341137349606 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -1.20271551609039306640625000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001110110001111100100010101 B = 11000001101100111010001100010101 opcode = 011 CIN = 0 @                 3000
+# 
+# in in_mon A = 01000001110110001111100100010101 B = 11000001101100111010001100010101 opcode = 011 CIN = 0 @                 3002
+# 
+# in out_mon VOUT = 0 OUT = bf9a9a88 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3100
+# 
+# oper_A = 27.121622 input A = 01000001110110001111100100010101
+# 
+# oper_B = -22.454630 input B = 11000001101100111010001100010101
+# 
+# out_dut = -1.207841 out = 10111111100110101001101010001000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 27.12162208557128906250000000000000000000 B = -22.45462989807128906250000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -1.20784097572237714146581311069894582033 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -1.20784091949462890625000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000111011110100011010100101 B = 01000010000110011000000101101000 opcode = 011 CIN = 0 @                 3100
+# 
+# in in_mon A = 11000000111011110100011010100101 B = 01000010000110011000000101101000 opcode = 011 CIN = 0 @                 3102
+# 
+# in out_mon VOUT = 0 OUT = be4784f6 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3200
+# 
+# oper_A = -7.477374 input A = 11000000111011110100011010100101
+# 
+# oper_B = 38.376373 input B = 01000010000110011000000101101000
+# 
+# out_dut = -0.194843 out = 10111110010001111000010011110110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -7.47737360000610351562500000000000000000 B = 38.37637329101562500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.19484315371084445778215865630045300350 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.19484314322471618652343750000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001000001011011011000000110 B = 01000000011011010111001000110110 opcode = 011 CIN = 0 @                 3200
+# 
+# in in_mon A = 01000001000001011011011000000110 B = 01000000011011010111001000110110 opcode = 011 CIN = 0 @                 3202
+# 
+# in out_mon VOUT = 0 OUT = 401028ba underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3300
+# 
+# oper_A = 8.356939 input A = 01000001000001011011011000000110
+# 
+# oper_B = 3.710096 input B = 01000000011011010111001000110110
+# 
+# out_dut = 2.252486 out = 01000000000100000010100010111010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 8.35693931579589843750000000000000000000 B = 3.71009588241577148437500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 2.25248607600793526728466531494632363319 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 2.25248575210571289062500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001111110010010111111101001 B = 11000010110101101001110111110000 opcode = 011 CIN = 0 @                 3300
+# 
+# in in_mon A = 11000001111110010010111111101001 B = 11000010110101101001110111110000 opcode = 011 CIN = 0 @                 3302
+# 
+# in out_mon VOUT = 0 OUT = 3e949e39 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3400
+# 
+# oper_A = -31.148394 input A = 11000001111110010010111111101001
+# 
+# oper_B = -107.308472 input B = 11000010110101101001110111110000
+# 
+# out_dut = 0.290270 out = 00111110100101001001111000111001
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -31.14839363098144531250000000000000000000 B = -107.30847167968750000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.29026966038579365969596324248414020985 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.29026964306831359863281250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011110001000010111000101101 B = 01000000110000011101000000110101 opcode = 011 CIN = 0 @                 3400
+# 
+# in in_mon A = 11000011110001000010111000101101 B = 01000000110000011101000000110101 opcode = 011 CIN = 0 @                 3402
+# 
+# in out_mon VOUT = 0 OUT = c2819033 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3500
+# 
+# oper_A = -392.360748 input A = 11000011110001000010111000101101
+# 
+# oper_B = 6.056666 input B = 01000000110000011101000000110101
+# 
+# out_dut = -64.781639 out = 11000010100000011001000000110011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -392.36074829101562500000000000000000000000 B = 6.05666589736938476562500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -64.78163975685552600225491914898157119751 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -64.78163909912109375000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001000110001110100001110101 B = 01000000111100111000000110110111 opcode = 011 CIN = 0 @                 3500
+# 
+# in in_mon A = 11000001000110001110100001110101 B = 01000000111100111000000110110111 opcode = 011 CIN = 0 @                 3502
+# 
+# in out_mon VOUT = 0 OUT = bfa0c0ca underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3600
+# 
+# oper_A = -9.556752 input A = 11000001000110001110100001110101
+# 
+# oper_B = 7.609584 input B = 01000000111100111000000110110111
+# 
+# out_dut = -1.255883 out = 10111111101000001100000011001010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -9.55675220489501953125000000000000000000 B = 7.60958433151245117187500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -1.25588360527381870390684071026043966413 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -1.25588345527648925781250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000011101000011000000010010 B = 00111111101011000001100011011011 opcode = 011 CIN = 0 @                 3600
+# 
+# in in_mon A = 11000000011101000011000000010010 B = 00111111101011000001100011011011 opcode = 011 CIN = 0 @                 3602
+# 
+# in out_mon VOUT = 0 OUT = c0359e5d underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3700
+# 
+# oper_A = -3.815434 input A = 11000000011101000011000000010010
+# 
+# oper_B = 1.344509 input B = 00111111101011000001100011011011
+# 
+# out_dut = -2.837791 out = 11000000001101011001111001011101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -3.81543397903442382812500000000000000000 B = 1.34450852870941162109375000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -2.83779083402084753018357332621235400438 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -2.83779072761535644531250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000011101110111111110100000 B = 01000000100000111111000111000011 opcode = 011 CIN = 0 @                 3700
+# 
+# in in_mon A = 11000000011101110111111110100000 B = 01000000100000111111000111000011 opcode = 011 CIN = 0 @                 3702
+# 
+# in out_mon VOUT = 0 OUT = bf701988 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3800
+# 
+# oper_A = -3.867165 input A = 11000000011101110111111110100000
+# 
+# oper_B = 4.123262 input B = 01000000100000111111000111000011
+# 
+# out_dut = -0.937890 out = 10111111011100000001100110001000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -3.86716461181640625000000000000000000000 B = 4.12326192855834960937500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.93788963175776596248311989256762899458 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.93788957595825195312500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 00111111111101010001111011101010 B = 01000000110100000111010110110000 opcode = 011 CIN = 0 @                 3800
+# 
+# in in_mon A = 00111111111101010001111011101010 B = 01000000110100000111010110110000 opcode = 011 CIN = 0 @                 3802
+# 
+# in out_mon VOUT = 0 OUT = 3e9682c9 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 3900
+# 
+# oper_A = 1.915006 input A = 00111111111101010001111011101010
+# 
+# oper_B = 6.514366 input B = 01000000110100000111010110110000
+# 
+# out_dut = 0.293967 out = 00111110100101101000001011001001
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 3900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 1.91500592231750488281250000000000000000 B = 6.51436614990234375000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.29396657759960459488368655911472160369 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.29396656155586242675781250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011000011010011101110101101 B = 11000011100101000111101100110010 opcode = 011 CIN = 0 @                 3900
+# 
+# in in_mon A = 01000011000011010011101110101101 B = 11000011100101000111101100110010 opcode = 011 CIN = 0 @                 3902
+# 
+# in out_mon VOUT = 0 OUT = bef380da underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4000
+# 
+# oper_A = 141.233109 input A = 01000011000011010011101110101101
+# 
+# oper_B = -296.962463 input B = 11000011100101000111101100110010
+# 
+# out_dut = -0.475592 out = 10111110111100111000000011011010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 141.23310852050781250000000000000000000000 B = -296.96246337890625000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.47559246011608835580375398421892896295 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.47559243440628051757812500000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000010101100101001101101001001 B = 11000010000101100000110011011101 opcode = 011 CIN = 0 @                 4000
+# 
+# in in_mon A = 11000010101100101001101101001001 B = 11000010000101100000110011011101 opcode = 011 CIN = 0 @                 4002
+# 
+# in out_mon VOUT = 0 OUT = 40185c23 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4100
+# 
+# oper_A = -89.303291 input A = 11000010101100101001101101001001
+# 
+# oper_B = -37.512562 input B = 11000010000101100000110011011101
+# 
+# out_dut = 2.380624 out = 01000000000110000101110000100011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -89.30329132080078125000000000000000000000 B = -37.51256179809570312500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 2.38062363752864758481564422254450619221 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 2.38062357902526855468750000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000010101100000001010010111110 B = 01000010111001101001001101011100 opcode = 011 CIN = 0 @                 4100
+# 
+# in in_mon A = 11000010101100000001010010111110 B = 01000010111001101001001101011100 opcode = 011 CIN = 0 @                 4102
+# 
+# in out_mon VOUT = 0 OUT = bf437f1e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4200
+# 
+# oper_A = -88.040512 input A = 11000010101100000001010010111110
+# 
+# oper_B = 115.287811 input B = 01000010111001101001001101011100
+# 
+# out_dut = -0.763658 out = 10111111010000110111111100011110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -88.04051208496093750000000000000000000000 B = 115.28781127929687500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.76365845710847535254828244433156214654 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.76365840435028076171875000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011010001100101100011100000 B = 01000010100001000010000010001001 opcode = 011 CIN = 0 @                 4200
+# 
+# in in_mon A = 01000011010001100101100011100000 B = 01000010100001000010000010001001 opcode = 011 CIN = 0 @                 4202
+# 
+# in out_mon VOUT = 0 OUT = 404026d2 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4300
+# 
+# oper_A = 198.347168 input A = 01000011010001100101100011100000
+# 
+# oper_B = 66.063545 input B = 01000010100001000010000010001001
+# 
+# out_dut = 3.002369 out = 01000000010000000010011011010010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 198.34716796875000000000000000000000000000 B = 66.06354522705078125000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 3.00236942003429696512739610625430941582 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 3.00236940383911132812500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000100111111110010000000100 B = 11000011100110001100111110001001 opcode = 011 CIN = 0 @                 4300
+# 
+# in in_mon A = 11000000100111111110010000000100 B = 11000011100110001100111110001001 opcode = 011 CIN = 0 @                 4302
+# 
+# in out_mon VOUT = 0 OUT = 3c85ee33 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4400
+# 
+# oper_A = -4.996584 input A = 11000000100111111110010000000100
+# 
+# oper_B = -305.621368 input B = 11000011100110001100111110001001
+# 
+# out_dut = 0.016349 out = 00111100100001011110111000110011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -4.99658393859863281250000000000000000000 B = -305.62136840820312500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.01634893516975863617113340353625972057 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.01634893380105495452880859375000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001111011111110001011010110 B = 00111111111110110001011001100001 opcode = 011 CIN = 0 @                 4400
+# 
+# in in_mon A = 11000001111011111110001011010110 B = 00111111111110110001011001100001 opcode = 011 CIN = 0 @                 4402
+# 
+# in out_mon VOUT = 0 OUT = c174945a underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4500
+# 
+# oper_A = -29.985760 input A = 11000001111011111110001011010110
+# 
+# oper_B = 1.961620 input B = 00111111111110110001011001100001
+# 
+# out_dut = -15.286219 out = 11000001011101001001010001011010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -29.98575973510742187500000000000000000000 B = 1.96162045001983642578125000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -15.28621897003785790047913906164467334747 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -15.28621864318847656250000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000010000100001110001011110 B = 11000010100001100111001000010011 opcode = 011 CIN = 0 @                 4500
+# 
+# in in_mon A = 01000000010000100001110001011110 B = 11000010100001100111001000010011 opcode = 011 CIN = 0 @                 4502
+# 
+# in out_mon VOUT = 0 OUT = bd38ce02 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4600
+# 
+# oper_A = 3.032981 input A = 01000000010000100001110001011110
+# 
+# oper_B = -67.222801 input B = 11000010100001100111001000010011
+# 
+# out_dut = -0.045118 out = 10111101001110001100111000000010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 3.03298139572143554687500000000000000000 B = -67.22280120849609375000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.04511834290145745607336635885076248087 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.04511833935976028442382812500000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011101100001111101011100111 B = 11000011001010011000010100010100 opcode = 011 CIN = 0 @                 4600
+# 
+# in in_mon A = 11000011101100001111101011100111 B = 11000011001010011000010100010100 opcode = 011 CIN = 0 @                 4602
+# 
+# in out_mon VOUT = 0 OUT = 4005a20e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4700
+# 
+# oper_A = -353.960175 input A = 11000011101100001111101011100111
+# 
+# oper_B = -169.519836 input B = 11000011001010011000010100010100
+# 
+# out_dut = 2.088016 out = 01000000000001011010001000001110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -353.96017456054687500000000000000000000000 B = -169.51983642578125000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 2.08801625829503922915364455548115074635 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 2.08801603317260742187500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011100011100001000011111000 B = 11000000111110101110111001110011 opcode = 011 CIN = 0 @                 4700
+# 
+# in in_mon A = 01000011100011100001000011111000 B = 11000000111110101110111001110011 opcode = 011 CIN = 0 @                 4702
+# 
+# in out_mon VOUT = 0 OUT = c210ef94 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4800
+# 
+# oper_A = 284.132568 input A = 01000011100011100001000011111000
+# 
+# oper_B = -7.841608 input B = 11000000111110101110111001110011
+# 
+# out_dut = -36.233963 out = 11000010000100001110111110010100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 284.13256835937500000000000000000000000000 B = -7.84160757064819335937500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -36.23396934869674623769242316484451293945 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -36.23396301269531250000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001101101011011110001110011 B = 01000000111110110110010011000010 opcode = 011 CIN = 0 @                 4800
+# 
+# in in_mon A = 11000001101101011011110001110011 B = 01000000111110110110010011000010 opcode = 011 CIN = 0 @                 4802
+# 
+# in out_mon VOUT = 0 OUT = c03910f0 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 4900
+# 
+# oper_A = -22.717016 input A = 11000001101101011011110001110011
+# 
+# oper_B = 7.856050 input B = 01000000111110110110010011000010
+# 
+# out_dut = -2.891659 out = 11000000001110010001000011110000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 4900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -22.71701622009277343750000000000000000000 B = 7.85604953765869140625000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -2.89165898346193994683517303201369941235 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -2.89165878295898437500000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001011001011001111010110100 B = 11000001010001100100000101101111 opcode = 011 CIN = 0 @                 4900
+# 
+# in in_mon A = 01000001011001011001111010110100 B = 11000001010001100100000101101111 opcode = 011 CIN = 0 @                 4902
+# 
+# in out_mon VOUT = 0 OUT = bf943ff2 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5000
+# 
+# oper_A = 14.351246 input A = 01000001011001011001111010110100
+# 
+# oper_B = -12.390975 input B = 11000001010001100100000101101111
+# 
+# out_dut = -1.158201 out = 10111111100101000011111111110010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 14.35124588012695312500000000000000000000 B = -12.39097499847412109375000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -1.15820150407003708004083364357938989997 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -1.15820145606994628906250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011001011111000110000100011 B = 11000010111010101110101110000110 opcode = 011 CIN = 0 @                 5000
+# 
+# in in_mon A = 11000011001011111000110000100011 B = 11000010111010101110101110000110 opcode = 011 CIN = 0 @                 5002
+# 
+# in out_mon VOUT = 0 OUT = 3fbf4cba underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5100
+# 
+# oper_A = -175.547409 input A = 11000011001011111000110000100011
+# 
+# oper_B = -117.460007 input B = 11000010111010101110101110000110
+# 
+# out_dut = 1.494529 out = 00111111101111110100110010111010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -175.54740905761718750000000000000000000000 B = -117.46000671386718750000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 1.49452919311720311412727824063040316105 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 1.49452900886535644531250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 10111111101111011010111110010110 B = 10111111100111101101001111100000 opcode = 011 CIN = 0 @                 5100
+# 
+# in in_mon A = 10111111101111011010111110010110 B = 10111111100111101101001111100000 opcode = 011 CIN = 0 @                 5102
+# 
+# in out_mon VOUT = 0 OUT = 3f98de6a underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5200
+# 
+# oper_A = -1.481921 input A = 10111111101111011010111110010110
+# 
+# oper_B = -1.240841 input B = 10111111100111101101001111100000
+# 
+# out_dut = 1.194288 out = 00111111100110001101111001101010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -1.48192095756530761718750000000000000000 B = -1.24084091186523437500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 1.19428763461520714983521429530810564756 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 1.19428753852844238281250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000010110011001101111011000101 B = 11000001010011101001111110010101 opcode = 011 CIN = 0 @                 5200
+# 
+# in in_mon A = 01000010110011001101111011000101 B = 11000001010011101001111110010101 opcode = 011 CIN = 0 @                 5202
+# 
+# in out_mon VOUT = 0 OUT = c0fdd3ee underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5300
+# 
+# oper_A = 102.435097 input A = 01000010110011001101111011000101
+# 
+# oper_B = -12.913960 input B = 11000001010011101001111110010101
+# 
+# out_dut = -7.932120 out = 11000000111111011101001111101110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 102.43509674072265625000000000000000000000 B = -12.91396045684814453125000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -7.93212098511594465577445589588023722172 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -7.93212032318115234375000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011100001110111011000111101 B = 11000011111101010010100111111101 opcode = 011 CIN = 0 @                 5300
+# 
+# in in_mon A = 11000011100001110111011000111101 B = 11000011111101010010100111111101 opcode = 011 CIN = 0 @                 5302
+# 
+# in out_mon VOUT = 0 OUT = 3f0d72fa underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5400
+# 
+# oper_A = -270.923737 input A = 11000011100001110111011000111101
+# 
+# oper_B = -490.328033 input B = 11000011111101010010100111111101
+# 
+# out_dut = 0.552536 out = 00111111000011010111001011111010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -270.92373657226562500000000000000000000000 B = -490.32803344726562500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.55253568650262219197344393251114524901 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.55253565311431884765625000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000000000110110001110000110 B = 11000000111110000111000001101000 opcode = 011 CIN = 0 @                 5400
+# 
+# in in_mon A = 01000000000000110110001110000110 B = 11000000111110000111000001101000 opcode = 011 CIN = 0 @                 5402
+# 
+# in out_mon VOUT = 0 OUT = be87632c underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5500
+# 
+# oper_A = 2.052949 input A = 01000000000000110110001110000110
+# 
+# oper_B = -7.763721 input B = 11000000111110000111000001101000
+# 
+# out_dut = -0.264428 out = 10111110100001110110001100101100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 2.05294942855834960937500000000000000000 B = -7.76372146606445312500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.26442852664561400377607469636132009327 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.26442849636077880859375000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 10111111100001000111001010101110 B = 00111111101111000000101000110110 opcode = 011 CIN = 0 @                 5500
+# 
+# in in_mon A = 10111111100001000111001010101110 B = 00111111101111000000101000110110 opcode = 011 CIN = 0 @                 5502
+# 
+# in out_mon VOUT = 0 OUT = bf345100 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5600
+# 
+# oper_A = -1.034750 input A = 10111111100001000111001010101110
+# 
+# oper_B = 1.469062 input B = 00111111101111000000101000110110
+# 
+# out_dut = -0.704361 out = 10111111001101000101000100000000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -1.03474974632263183593750000000000000000 B = 1.46906161308288574218750000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.70436102686746215884028288201079703867 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.70436096191406250000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000010000110001101110111100110 B = 11000001110110111100100010001001 opcode = 011 CIN = 0 @                 5600
+# 
+# in in_mon A = 11000010000110001101110111100110 B = 11000001110110111100100010001001 opcode = 011 CIN = 0 @                 5602
+# 
+# in out_mon VOUT = 0 OUT = 3fb20e84 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5700
+# 
+# oper_A = -38.216698 input A = 11000010000110001101110111100110
+# 
+# oper_B = -27.472918 input B = 11000001110110111100100010001001
+# 
+# out_dut = 1.391068 out = 00111111101100100000111010000100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -38.21669769287109375000000000000000000000 B = -27.47291755676269531250000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 1.39106804415331297697377976874122396111 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 1.39106798171997070312500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011111010111011010100000010 B = 11000010001000000111011101001110 opcode = 011 CIN = 0 @                 5700
+# 
+# in in_mon A = 01000011111010111011010100000010 B = 11000010001000000111011101001110 opcode = 011 CIN = 0 @                 5702
+# 
+# in out_mon VOUT = 0 OUT = c13c049c underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5800
+# 
+# oper_A = 471.414124 input A = 01000011111010111011010100000010
+# 
+# oper_B = -40.116508 input B = 11000010001000000111011101001110
+# 
+# out_dut = -11.751125 out = 11000001001111000000010010011100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 471.41412353515625000000000000000000000000 B = -40.11650848388671875000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -11.75112544314531781708410562714561820030 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -11.75112533569335937500000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000010100111010111001000101 B = 01000011101011110101100100011110 opcode = 011 CIN = 0 @                 5800
+# 
+# in in_mon A = 11000000010100111010111001000101 B = 01000011101011110101100100011110 opcode = 011 CIN = 0 @                 5802
+# 
+# in out_mon VOUT = 0 OUT = bc1a859f underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 5900
+# 
+# oper_A = -3.307512 input A = 11000000010100111010111001000101
+# 
+# oper_B = 350.696228 input B = 01000011101011110101100100011110
+# 
+# out_dut = -0.009431 out = 10111100000110101000010110011111
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 5900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -3.30751156806945800781250000000000000000 B = 350.69622802734375000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.00943127214875995670273489679402700858 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.00943127181380987167358398437500000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011101111011111100110011010 B = 01000011100011111100111111011100 opcode = 011 CIN = 0 @                 5900
+# 
+# in in_mon A = 01000011101111011111100110011010 B = 01000011100011111100111111011100 opcode = 011 CIN = 0 @                 5902
+# 
+# in out_mon VOUT = 0 OUT = 3fa91665 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6000
+# 
+# oper_A = 379.950012 input A = 01000011101111011111100110011010
+# 
+# oper_B = 287.623901 input B = 01000011100011111100111111011100
+# 
+# out_dut = 1.320996 out = 00111111101010010001011001100101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 379.95001220703125000000000000000000000000 B = 287.62390136718750000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 1.32099596174372879708869277237681671977 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 1.32099592685699462890625000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001000110111011001000110010 B = 11000010101011110000100001001000 opcode = 011 CIN = 0 @                 6000
+# 
+# in in_mon A = 11000001000110111011001000110010 B = 11000010101011110000100001001000 opcode = 011 CIN = 0 @                 6002
+# 
+# in out_mon VOUT = 0 OUT = 3de3b810 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6100
+# 
+# oper_A = -9.731005 input A = 11000001000110111011001000110010
+# 
+# oper_B = -87.516174 input B = 11000010101011110000100001001000
+# 
+# out_dut = 0.111191 out = 00111101111000111011100000010000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -9.73100471496582031250000000000000000000 B = -87.51617431640625000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.11119092888800549689953811594023136422 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.11119091510772705078125000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000010101000100111000110111000 B = 11000011100100000010010001000000 opcode = 011 CIN = 0 @                 6100
+# 
+# in in_mon A = 01000010101000100111000110111000 B = 11000011100100000010010001000000 opcode = 011 CIN = 0 @                 6102
+# 
+# in out_mon VOUT = 0 OUT = be9040c5 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6200
+# 
+# oper_A = 81.222107 input A = 01000010101000100111000110111000
+# 
+# oper_B = -288.283203 input B = 11000011100100000010010001000000
+# 
+# out_dut = -0.281744 out = 10111110100100000100000011000101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 81.22210693359375000000000000000000000000 B = -288.28320312500000000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.28174415315614392829601797529903706163 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.28174415230751037597656250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001100010011001101101101100 B = 11000010011100100000001000111010 opcode = 011 CIN = 0 @                 6200
+# 
+# in in_mon A = 01000001100010011001101101101100 B = 11000010011100100000001000111010 opcode = 011 CIN = 0 @                 6202
+# 
+# in out_mon VOUT = 0 OUT = be919008 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6300
+# 
+# oper_A = 17.200890 input A = 01000001100010011001101101101100
+# 
+# oper_B = -60.502174 input B = 11000010011100100000001000111010
+# 
+# out_dut = -0.284302 out = 10111110100100011001000000001000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 17.20088958740234375000000000000000000000 B = -60.50217437744140625000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.28430200673607192163316881305945571512 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.28430199623107910156250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000111110010101000101001010 B = 01000001111011110111100111011110 opcode = 011 CIN = 0 @                 6300
+# 
+# in in_mon A = 01000000111110010101000101001010 B = 01000001111011110111100111011110 opcode = 011 CIN = 0 @                 6302
+# 
+# in out_mon VOUT = 0 OUT = 3e8542a1 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6400
+# 
+# oper_A = 7.791173 input A = 01000000111110010101000101001010
+# 
+# oper_B = 29.934505 input B = 01000001111011110111100111011110
+# 
+# out_dut = 0.260274 out = 00111110100001010100001010100001
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 7.79117298126220703125000000000000000000 B = 29.93450546264648437500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.26027398351325214953533304651500657201 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.26027396321296691894531250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000100001111100010101100011 B = 01000000001001101001010101111001 opcode = 011 CIN = 0 @                 6400
+# 
+# in in_mon A = 01000000100001111100010101100011 B = 01000000001001101001010101111001 opcode = 011 CIN = 0 @                 6402
+# 
+# in out_mon VOUT = 0 OUT = 3fd0a5e0 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6500
+# 
+# oper_A = 4.242845 input A = 01000000100001111100010101100011
+# 
+# oper_B = 2.602873 input B = 01000000001001101001010101111001
+# 
+# out_dut = 1.630062 out = 00111111110100001010010111100000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 4.24284505844116210937500000000000000000 B = 2.60287308692932128906250000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 1.63006221077284996212597434350755065680 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 1.63006210327148437500000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000000010110111000110100100 B = 11000010101000001001000100110110 opcode = 011 CIN = 0 @                 6500
+# 
+# in in_mon A = 01000000000010110111000110100100 B = 11000010101000001001000100110110 opcode = 011 CIN = 0 @                 6502
+# 
+# in out_mon VOUT = 0 OUT = bcde5272 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6600
+# 
+# oper_A = 2.178811 input A = 01000000000010110111000110100100
+# 
+# oper_B = -80.283615 input B = 11000010101000001001000100110110
+# 
+# out_dut = -0.027139 out = 10111100110111100101001001110010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 2.17881107330322265625000000000000000000 B = -80.28361511230468750000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.02713892579769102558762128296621085610 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.02713892236351966857910156250000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001111110011010011000100000 B = 01000000010000010101011111011011 opcode = 011 CIN = 0 @                 6600
+# 
+# in in_mon A = 11000001111110011010011000100000 B = 01000000010000010101011111011011 opcode = 011 CIN = 0 @                 6602
+# 
+# in out_mon VOUT = 0 OUT = c12546c1 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6700
+# 
+# oper_A = -31.206116 input A = 11000001111110011010011000100000
+# 
+# oper_B = 3.020987 input B = 01000000010000010101011111011011
+# 
+# out_dut = -10.329774 out = 11000001001001010100011011000001
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -31.20611572265625000000000000000000000000 B = 3.02098727226257324218750000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -10.32977398123375145644331496441736817360 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -10.32977390289306640625000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000010100011000011001011011000 B = 01000010100000111010011110001010 opcode = 011 CIN = 0 @                 6700
+# 
+# in in_mon A = 11000010100011000011001011011000 B = 01000010100000111010011110001010 opcode = 011 CIN = 0 @                 6702
+# 
+# in out_mon VOUT = 0 OUT = bf884e96 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6800
+# 
+# oper_A = -70.099304 input A = 11000010100011000011001011011000
+# 
+# oper_B = 65.827225 input B = 01000010100000111010011110001010
+# 
+# out_dut = -1.064898 out = 10111111100010000100111010010110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -70.09930419921875000000000000000000000000 B = 65.82722473144531250000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -1.06489836819343675067273125023348256946 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -1.06489825248718261718750000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011110101011000111000011100 B = 01000001011010001011001101011100 opcode = 011 CIN = 0 @                 6800
+# 
+# in in_mon A = 01000011110101011000111000011100 B = 01000001011010001011001101011100 opcode = 011 CIN = 0 @                 6802
+# 
+# in out_mon VOUT = 0 OUT = 41eaf000 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 6900
+# 
+# oper_A = 427.110229 input A = 01000011110101011000111000011100
+# 
+# oper_B = 14.543789 input B = 01000001011010001011001101011100
+# 
+# out_dut = 29.367188 out = 01000001111010101111000000000000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 6900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 427.11022949218750000000000000000000000000 B = 14.54378890991210937500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 29.36719118641062564734056650195270776749 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 29.36718750000000000000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000101111000001010100110001 B = 11000011110110110011010100110000 opcode = 011 CIN = 0 @                 6900
+# 
+# in in_mon A = 11000000101111000001010100110001 B = 11000011110110110011010100110000 opcode = 011 CIN = 0 @                 6902
+# 
+# in out_mon VOUT = 0 OUT = 3c5ba6a4 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7000
+# 
+# oper_A = -5.877587 input A = 11000000101111000001010100110001
+# 
+# oper_B = -438.415527 input B = 11000011110110110011010100110000
+# 
+# out_dut = 0.013406 out = 00111100010110111010011010100100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -5.87758684158325195312500000000000000000 B = -438.41552734375000000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.01340642946018376704953034561640379252 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.01340642943978309631347656250000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011001001101000001000100011 B = 11000010110001111001110011000001 opcode = 011 CIN = 0 @                 7000
+# 
+# in in_mon A = 11000011001001101000001000100011 B = 11000010110001111001110011000001 opcode = 011 CIN = 0 @                 7002
+# 
+# in out_mon VOUT = 0 OUT = 3fd58b6c underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7100
+# 
+# oper_A = -166.508347 input A = 11000011001001101000001000100011
+# 
+# oper_B = -99.806160 input B = 11000010110001111001110011000001
+# 
+# out_dut = 1.668317 out = 00111111110101011000101101101100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -166.50834655761718750000000000000000000000 B = -99.80615997314453125000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 1.66831733234121659670279314013896510005 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 1.66831731796264648437500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000010000010010111110100110 B = 01000001110011001001010101000010 opcode = 011 CIN = 0 @                 7100
+# 
+# in in_mon A = 01000000010000010010111110100110 B = 01000001110011001001010101000010 opcode = 011 CIN = 0 @                 7102
+# 
+# in out_mon VOUT = 0 OUT = 3df1bd1e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7200
+# 
+# oper_A = 3.018533 input A = 01000000010000010010111110100110
+# 
+# oper_B = 25.572880 input B = 01000001110011001001010101000010
+# 
+# out_dut = 0.118036 out = 00111101111100011011110100011110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 3.01853322982788085937500000000000000000 B = 25.57287979125976562500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.11803650016997881133651304708109819330 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.11803649365901947021484375000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000001111100100010111110101 B = 11000011001110110001100110101110 opcode = 011 CIN = 0 @                 7200
+# 
+# in in_mon A = 11000000001111100100010111110101 B = 11000011001110110001100110101110 opcode = 011 CIN = 0 @                 7202
+# 
+# in out_mon VOUT = 0 OUT = 3c822bb3 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7300
+# 
+# oper_A = -2.973020 input A = 11000000001111100100010111110101
+# 
+# oper_B = -187.100311 input B = 11000011001110110001100110101110
+# 
+# out_dut = 0.015890 out = 00111100100000100010101110110011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -2.97301983833312988281250000000000000000 B = -187.10031127929687500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.01588997804442510500266827477844344685 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.01588997803628444671630859375000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001010100111000110100110111 B = 11000010000100101101110001010010 opcode = 011 CIN = 0 @                 7300
+# 
+# in in_mon A = 01000001010100111000110100110111 B = 11000010000100101101110001010010 opcode = 011 CIN = 0 @                 7302
+# 
+# in out_mon VOUT = 0 OUT = beb8620e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7400
+# 
+# oper_A = 13.221976 input A = 01000001010100111000110100110111
+# 
+# oper_B = -36.715157 input B = 11000010000100101101110001010010
+# 
+# out_dut = -0.360123 out = 10111110101110000110001000001110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 13.22197628021240234375000000000000000000 B = -36.71515655517578125000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.36012310775094552584008056328457314521 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.36012309789657592773437500000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000011000011100010110100010 B = 01000010010001001100000101011110 opcode = 011 CIN = 0 @                 7400
+# 
+# in in_mon A = 01000000011000011100010110100010 B = 01000010010001001100000101011110 opcode = 011 CIN = 0 @                 7402
+# 
+# in out_mon VOUT = 0 OUT = 3d92e07d underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7500
+# 
+# oper_A = 3.527688 input A = 01000000011000011100010110100010
+# 
+# oper_B = 49.188835 input B = 01000010010001001100000101011110
+# 
+# out_dut = 0.071717 out = 00111101100100101110000001111101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 3.52768754959106445312500000000000000000 B = 49.18883514404296875000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.07171724110279700803438629463926190510 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.07171723991632461547851562500000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000010001010110100010101110111 B = 11000001100100111111001101010101 opcode = 011 CIN = 0 @                 7500
+# 
+# in in_mon A = 11000010001010110100010101110111 B = 11000001100100111111001101010101 opcode = 011 CIN = 0 @                 7502
+# 
+# in out_mon VOUT = 0 OUT = 40142d15 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7600
+# 
+# oper_A = -42.817837 input A = 11000010001010110100010101110111
+# 
+# oper_B = -18.493814 input B = 11000001100100111111001101010101
+# 
+# out_dut = 2.315252 out = 01000000000101000010110100010101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -42.81783676147460937500000000000000000000 B = -18.49381446838378906250000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 2.31525177429859585487292861216701567173 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 2.31525158882141113281250000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000111001011001011101011001 B = 11000011011101110110101000101010 opcode = 011 CIN = 0 @                 7600
+# 
+# in in_mon A = 11000000111001011001011101011001 B = 11000011011101110110101000101010 opcode = 011 CIN = 0 @                 7602
+# 
+# in out_mon VOUT = 0 OUT = 3ced8eda underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7700
+# 
+# oper_A = -7.174725 input A = 11000000111001011001011101011001
+# 
+# oper_B = -247.414703 input B = 11000011011101110110101000101010
+# 
+# out_dut = 0.028999 out = 00111100111011011000111011011010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -7.17472505569458007812500000000000000000 B = -247.41470336914062500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.02899878203677309917996041122023598291 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.02899878099560737609863281250000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011010111010000010111011101 B = 11000000001000000100000000000110 opcode = 011 CIN = 0 @                 7700
+# 
+# in in_mon A = 11000011010111010000010111011101 B = 11000000001000000100000000000110 opcode = 011 CIN = 0 @                 7702
+# 
+# in out_mon VOUT = 0 OUT = 42b08ad9 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7800
+# 
+# oper_A = -221.022903 input A = 11000011010111010000010111011101
+# 
+# oper_B = -2.503908 input B = 11000000001000000100000000000110
+# 
+# out_dut = 88.271187 out = 01000010101100001000101011011001
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -221.02290344238281250000000000000000000000 B = -2.50390768051147460937500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 88.27118713787176318419369636103510856628 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 88.27118682861328125000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000010001000001000011000101 B = 01000010100000110001100101001101 opcode = 011 CIN = 0 @                 7800
+# 
+# in in_mon A = 11000000010001000001000011000101 B = 01000010100000110001100101001101 opcode = 011 CIN = 0 @                 7802
+# 
+# in out_mon VOUT = 0 OUT = bd3f6e58 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 7900
+# 
+# oper_A = -3.063524 input A = 11000000010001000001000011000101
+# 
+# oper_B = 65.549416 input B = 01000010100000110001100101001101
+# 
+# out_dut = -0.046736 out = 10111101001111110110111001011000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 7900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -3.06352353096008300781250000000000000000 B = 65.54941558837890625000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.04673609220557577853538688827939040493 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.04673609137535095214843750000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000010010111001001011010001111 B = 00111111100010010111101010000101 opcode = 011 CIN = 0 @                 7900
+# 
+# in in_mon A = 01000010010111001001011010001111 B = 00111111100010010111101010000101 opcode = 011 CIN = 0 @                 7902
+# 
+# in out_mon VOUT = 0 OUT = 424d6124 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8000
+# 
+# oper_A = 55.147030 input A = 01000010010111001001011010001111
+# 
+# oper_B = 1.074051 input B = 00111111100010010111101010000101
+# 
+# out_dut = 51.344864 out = 01000010010011010110000100100100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 55.14702987670898437500000000000000000000 B = 1.07405149936676025390625000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 51.34486559464103549998981179669499397278 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 51.34486389160156250000000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 10111111110010010011101100111101 B = 11000001000010010100100000000011 opcode = 011 CIN = 0 @                 8000
+# 
+# in in_mon A = 10111111110010010011101100111101 B = 11000001000010010100100000000011 opcode = 011 CIN = 0 @                 8002
+# 
+# in out_mon VOUT = 0 OUT = 3e3ba067 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8100
+# 
+# oper_A = -1.572120 input A = 10111111110010010011101100111101
+# 
+# oper_B = -8.580081 input B = 11000001000010010100100000000011
+# 
+# out_dut = 0.183229 out = 00111110001110111010000001100111
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -1.57212030887603759765625000000000000000 B = -8.58008098602294921875000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.18322907574381169792943069296597968787 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.18322907388210296630859375000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011101111111001111110111100 B = 01000010001001000010111101100110 opcode = 011 CIN = 0 @                 8100
+# 
+# in in_mon A = 11000011101111111001111110111100 B = 01000010001001000010111101100110 opcode = 011 CIN = 0 @                 8102
+# 
+# in out_mon VOUT = 0 OUT = c1156439 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8200
+# 
+# oper_A = -383.247925 input A = 11000011101111111001111110111100
+# 
+# oper_B = 41.046288 input B = 01000010001001000010111101100110
+# 
+# out_dut = -9.336968 out = 11000001000101010110010000111001
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -383.24792480468750000000000000000000000000 B = 41.04628753662109375000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -9.33696925605653049728971382137387990952 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -9.33696842193603515625000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011011001100111001100001001 B = 01000011101100011010010011010110 opcode = 011 CIN = 0 @                 8200
+# 
+# in in_mon A = 01000011011001100111001100001001 B = 01000011101100011010010011010110 opcode = 011 CIN = 0 @                 8202
+# 
+# in out_mon VOUT = 0 OUT = 3f260c70 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8300
+# 
+# oper_A = 230.449356 input A = 01000011011001100111001100001001
+# 
+# oper_B = 355.287781 input B = 01000011101100011010010011010110
+# 
+# out_dut = 0.648627 out = 00111111001001100000110001110000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 230.44935607910156250000000000000000000000 B = 355.28778076171875000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.64862730596878392930193513166159391403 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.64862728118896484375000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001011011011000010001110000 B = 01000010010001101101010001011000 opcode = 011 CIN = 0 @                 8300
+# 
+# in in_mon A = 01000001011011011000010001110000 B = 01000010010001101101010001011000 opcode = 011 CIN = 0 @                 8302
+# 
+# in out_mon VOUT = 0 OUT = 3e98e7ef underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8400
+# 
+# oper_A = 14.844833 input A = 01000001011011011000010001110000
+# 
+# oper_B = 49.707367 input B = 01000010010001101101010001011000
+# 
+# out_dut = 0.298645 out = 00111110100110001110011111101111
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 14.84483337402343750000000000000000000000 B = 49.70736694335937500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.29864453272970281627607391783385537565 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.29864451289176940917968750000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000001100010000111101011010110 B = 11000010011110001110001001111011 opcode = 011 CIN = 0 @                 8400
+# 
+# in in_mon A = 11000001100010000111101011010110 B = 11000010011110001110001001111011 opcode = 011 CIN = 0 @                 8402
+# 
+# in out_mon VOUT = 0 OUT = 3e8c61b0 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8500
+# 
+# oper_A = -17.059978 input A = 11000001100010000111101011010110
+# 
+# oper_B = -62.221172 input B = 11000010011110001110001001111011
+# 
+# out_dut = 0.274183 out = 00111110100011000110000110110000
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -17.05997848510742187500000000000000000000 B = -62.22117233276367187500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.27418285200203768026128159362997394055 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.27418279647827148437500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000110011100010100010000001 B = 01000000001100100000110100000011 opcode = 011 CIN = 0 @                 8500
+# 
+# in in_mon A = 11000000110011100010100010000001 B = 01000000001100100000110100000011 opcode = 011 CIN = 0 @                 8502
+# 
+# in out_mon VOUT = 0 OUT = c01434cf underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8600
+# 
+# oper_A = -6.442444 input A = 11000000110011100010100010000001
+# 
+# oper_B = 2.782044 input B = 01000000001100100000110100000011
+# 
+# out_dut = -2.315723 out = 11000000000101000011010011001111
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -6.44244432449340820312500000000000000000 B = 2.78204417228698730468750000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -2.31572323281890168900076787394937127829 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -2.31572318077087402343750000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000100010001101110010111101 B = 01000001111000101010111011010001 opcode = 011 CIN = 0 @                 8600
+# 
+# in in_mon A = 11000000100010001101110010111101 B = 01000001111000101010111011010001 opcode = 011 CIN = 0 @                 8602
+# 
+# in out_mon VOUT = 0 OUT = be1a9012 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8700
+# 
+# oper_A = -4.276946 input A = 11000000100010001101110010111101
+# 
+# oper_B = 28.335360 input B = 01000001111000101010111011010001
+# 
+# out_dut = -0.150940 out = 10111110000110101001000000010010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -4.27694559097290039062500000000000000000 B = 28.33535957336425781250000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.15094022646507387896974705654429271817 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.15094020962715148925781250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000011101111110100101100101011 B = 01000010001011000000110111011110 opcode = 011 CIN = 0 @                 8700
+# 
+# in in_mon A = 01000011101111110100101100101011 B = 01000010001011000000110111011110 opcode = 011 CIN = 0 @                 8702
+# 
+# in out_mon VOUT = 0 OUT = 410e502f underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8800
+# 
+# oper_A = 382.587250 input A = 01000011101111110100101100101011
+# 
+# oper_B = 43.013542 input B = 01000010001011000000110111011110
+# 
+# out_dut = 8.894576 out = 01000001000011100101000000101111
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 382.58724975585937500000000000000000000000 B = 43.01354217529296875000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 8.89457669393286920467289746738970279694 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 8.89457607269287109375000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000001100010011111110000000 B = 11000001100011001000110010111000 opcode = 011 CIN = 0 @                 8800
+# 
+# in in_mon A = 11000000001100010011111110000000 B = 11000001100011001000110010111000 opcode = 011 CIN = 0 @                 8802
+# 
+# in out_mon VOUT = 0 OUT = 3e216beb underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 8900
+# 
+# oper_A = -2.769501 input A = 11000000001100010011111110000000
+# 
+# oper_B = -17.568710 input B = 11000001100011001000110010111000
+# 
+# out_dut = 0.157638 out = 00111110001000010110101111101011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 8900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -2.76950073242187500000000000000000000000 B = -17.56871032714843750000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.15763824895799224967696261501259868965 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.15763823688030242919921875000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 10111111100010110001000000000011 B = 11000011000000001100101010010111 opcode = 011 CIN = 0 @                 8900
+# 
+# in in_mon A = 10111111100010110001000000000011 B = 11000011000000001100101010010111 opcode = 011 CIN = 0 @                 8902
+# 
+# in out_mon VOUT = 0 OUT = 3c0a3543 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9000
+# 
+# oper_A = -1.086426 input A = 10111111100010110001000000000011
+# 
+# oper_B = -128.791367 input B = 11000011000000001100101010010111
+# 
+# out_dut = 0.008436 out = 00111100000010100011010101000011
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -1.08642613887786865234375000000000000000 B = -128.79136657714843750000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.00843555098258142246891999604940792779 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.00843555014580488204956054687500000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000011111100110001111000000111 B = 11000010000100110100110011000100 opcode = 011 CIN = 0 @                 9000
+# 
+# in in_mon A = 11000011111100110001111000000111 B = 11000010000100110100110011000100 opcode = 011 CIN = 0 @                 9002
+# 
+# in out_mon VOUT = 0 OUT = 41534354 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9100
+# 
+# oper_A = -486.234589 input A = 11000011111100110001111000000111
+# 
+# oper_B = -36.824966 input B = 11000010000100110100110011000100
+# 
+# out_dut = 13.203938 out = 01000001010100110100001101010100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9100: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -486.23458862304687500000000000000000000000 B = -36.82496643066406250000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 13.20393840788841721689550467999652028084 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 13.20393753051757812500000000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000001100100000000100000110 B = 01000000100001011111000000001101 opcode = 011 CIN = 0 @                 9100
+# 
+# in in_mon A = 11000000001100100000000100000110 B = 01000000100001011111000000001101 opcode = 011 CIN = 0 @                 9102
+# 
+# in out_mon VOUT = 0 OUT = bf2a1cdd underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9200
+# 
+# oper_A = -2.781312 input A = 11000000001100100000000100000110
+# 
+# oper_B = 4.185553 input B = 01000000100001011111000000001101
+# 
+# out_dut = -0.664503 out = 10111111001010100001110011011101
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9200: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -2.78131246566772460937500000000000000000 B = 4.18555307388305664062500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.66450297405676472806135279824957251549 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.66450291872024536132812500000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 00111111101010010100110110111000 B = 01000000110100000011110100010011 opcode = 011 CIN = 0 @                 9200
+# 
+# in in_mon A = 00111111101010010100110110111000 B = 01000000110100000011110100010011 opcode = 011 CIN = 0 @                 9202
+# 
+# in out_mon VOUT = 0 OUT = 3e50228a underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9300
+# 
+# oper_A = 1.322684 input A = 00111111101010010100110110111000
+# 
+# oper_B = 6.507455 input B = 01000000110100000011110100010011
+# 
+# out_dut = 0.203257 out = 00111110010100000010001010001010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9300: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 1.32268428802490234375000000000000000000 B = 6.50745534896850585937500000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.20325675968480683142303178101428784430 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.20325675606727600097656250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000110101000100110001001111 B = 01000001111011011001010010101010 opcode = 011 CIN = 0 @                 9300
+# 
+# in in_mon A = 01000000110101000100110001001111 B = 01000001111011011001010010101010 opcode = 011 CIN = 0 @                 9302
+# 
+# in out_mon VOUT = 0 OUT = 3e64c1da underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9400
+# 
+# oper_A = 6.634315 input A = 01000000110101000100110001001111
+# 
+# oper_B = 29.697590 input B = 01000001111011011001010010101010
+# 
+# out_dut = 0.223396 out = 00111110011001001100000111011010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9400: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 6.63431501388549804687500000000000000000 B = 29.69758987426757812500000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.22339573823914954386893327864527236670 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.22339573502540588378906250000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 00111111101001010010001111001100 B = 11000011001111100100110000011100 opcode = 011 CIN = 0 @                 9400
+# 
+# in in_mon A = 00111111101001010010001111001100 B = 11000011001111100100110000011100 opcode = 011 CIN = 0 @                 9402
+# 
+# in out_mon VOUT = 0 OUT = bbde2814 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9500
+# 
+# oper_A = 1.290155 input A = 00111111101001010010001111001100
+# 
+# oper_B = -190.297302 input B = 11000011001111100100110000011100
+# 
+# out_dut = -0.006780 out = 10111011110111100010100000010100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9500: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 1.29015493392944335937500000000000000000 B = -190.29730224609375000000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.00677968062973907138746287870390005992 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.00677968002855777740478515625000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000110011000100001100100111 B = 01000010110100101111000001101001 opcode = 011 CIN = 0 @                 9500
+# 
+# in in_mon A = 01000000110011000100001100100111 B = 01000010110100101111000001101001 opcode = 011 CIN = 0 @                 9502
+# 
+# in out_mon VOUT = 0 OUT = 3d77e59c underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9600
+# 
+# oper_A = 6.383197 input A = 01000000110011000100001100100111
+# 
+# oper_B = 105.469551 input B = 01000010110100101111000001101001
+# 
+# out_dut = 0.060522 out = 00111101011101111110010110011100
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9600: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 6.38319730758666992187500000000000000000 B = 105.46955108642578125000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.06052170737273769585140570370640489273 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.06052170693874359130859375000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000001000111101000100101111111 B = 11000000011001011100010000000001 opcode = 011 CIN = 0 @                 9600
+# 
+# in in_mon A = 01000001000111101000100101111111 B = 11000000011001011100010000000001 opcode = 011 CIN = 0 @                 9602
+# 
+# in out_mon VOUT = 0 OUT = c030a37e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9700
+# 
+# oper_A = 9.908568 input A = 01000001000111101000100101111111
+# 
+# oper_B = -3.590088 input B = 11000000011001011100010000000001
+# 
+# out_dut = -2.759979 out = 11000000001100001010001101111110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9700: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 9.90856838226318359375000000000000000000 B = -3.59008812904357910156250000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -2.75997914984412506811395360273309051991 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -2.75997877120971679687500000000000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000110101011111011110010110 B = 11000010100001101011001001100001 opcode = 011 CIN = 0 @                 9700
+# 
+# in in_mon A = 11000000110101011111011110010110 B = 11000010100001101011001001100001 opcode = 011 CIN = 0 @                 9702
+# 
+# in out_mon VOUT = 0 OUT = 3dcb5447 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9800
+# 
+# oper_A = -6.686473 input A = 11000000110101011111011110010110
+# 
+# oper_B = -67.348396 input B = 11000010100001101011001001100001
+# 
+# out_dut = 0.099282 out = 00111101110010110101010001000111
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9800: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -6.68647289276123046875000000000000000000 B = -67.34839630126953125000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.09928184277544838121087877880199812353 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.09928184002637863159179687500000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 01000000001011110001010000010110 B = 01000010110010001011011101001001 opcode = 011 CIN = 0 @                 9800
+# 
+# in in_mon A = 01000000001011110001010000010110 B = 01000010110010001011011101001001 opcode = 011 CIN = 0 @                 9802
+# 
+# in out_mon VOUT = 0 OUT = 3cdf4d12 underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                 9900
+# 
+# oper_A = 2.735601 input A = 01000000001011110001010000010110
+# 
+# oper_B = 100.357979 input B = 01000010110010001011011101001001
+# 
+# out_dut = 0.027258 out = 00111100110111110100110100010010
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 9900: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = 2.73560094833374023437500000000000000000 B = 100.35797882080078125000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = 0.02725843007677974244584717666839424055 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = 0.02725842967629432678222656250000000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 11000000000010111110010000010101 B = 01000011110101110001111011111101 opcode = 011 CIN = 0 @                 9900
+# 
+# in in_mon A = 11000000000010111110010000010101 B = 01000011110101110001111011111101 opcode = 011 CIN = 0 @                 9902
+# 
+# in out_mon VOUT = 0 OUT = bba6795e underflow = 0 div_by_zero = 0 zero_by_zero = 0  @                10000
+# 
+# oper_A = -2.185796 input A = 11000000000010111110010000010101
+# 
+# oper_B = 430.242096 input B = 01000011110101110001111011111101
+# 
+# out_dut = -0.005080 out = 10111011101001100111100101011110
+# 
+# UVM_INFO ../tb/scoreboard.sv(348) @ 10000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] matching
+#   OPCODE = 011 A = -2.18579602241516113281250000000000000000 B = 430.24209594726562500000000000000000000000 CIN = 0
+#  EXPECTED OUTPUTS: OUT = -0.00508038623603923687049865876019794086 VOUT = 0 div_by_zero = 0 zero_by_zero = 0
+#  DUT OUTPUTS: OUT = -0.00508038606494665145874023437500000000 VOUT = 0 Underflow = 0 div_by_zero = 0 zero_by_zero = 0
+# 
+# in driver A = 10111111110110101000000001100010 B = 11000000000101110010000011100000 opcode = 011 CIN = 0 @                10000
+# 
+# 
+# 
+# 
+# 
+# 			///////////////////////////////////////////////////////////////////
+# 
+# 			-----------------------------------------------------------------------
+# 
+# 			 ------------------------------TEST COMPLETED---------------------
+# 
+# 			-----------------------------------------------------------------------
+# 
+# 			/////////////////////////////////////////////////////////////////////
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 10000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../tb/scoreboard.sv(369) @ 10000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] 
+# 				------------------------------TEST PASSED-------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(373) @ 10000: uvm_test_top.float_alu_env.float_alu_scoreboard [float_alu_scoreboard_c] 
+# Total tests run:         100
+#  Passed tests:         100
+#  Failed Tests:           0
+# 
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  106
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [float_alu_scoreboard_c]   102
+# ** Note: $finish    : /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1 us  Iteration: 68  Instance: /top
+# End time: 00:58:32 on Dec 05,2022, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 11
+Reading pref.tcl

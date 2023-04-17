@@ -1,0 +1,283 @@
+`include "uvm_macros.svh"
+package scoreboard; 
+import uvm_pkg::*;
+import sequences::*;
+
+class float_alu_scoreboard_c extends uvm_scoreboard;
+`uvm_component_utils(float_alu_scoreboard_c)
+
+static real out_gold;
+ 
+static logic vout_gold;
+static real cin_dut;
+
+static int diff;
+static real diff_in_outputs;
+static logic underflow_gold;
+static logic div_by_zero_gold;
+static logic zero_by_zero_gold;
+
+
+uvm_analysis_export #(float_alu_rand_item_in) scoreboard_port_in;
+uvm_analysis_export #(float_alu_rand_item_out) scoreboard_port_out;
+
+uvm_tlm_analysis_fifo #(float_alu_rand_item_in) fifo_port_in;
+uvm_tlm_analysis_fifo #(float_alu_rand_item_out) fifo_port_out;
+
+float_alu_rand_item_in tx_in;
+float_alu_rand_item_out tx_out;
+
+function new(string name, uvm_component parent);
+		super.new(name,parent);
+		tx_in=new("tx_in");
+		tx_out=new("tx_out");
+endfunction: new
+
+function void build_phase(uvm_phase phase);
+		scoreboard_port_in=new("scoreboard_port_in",this);
+		scoreboard_port_out=new("scoreboard_port_out",this);
+		fifo_port_in=new("fifo_port_in",this);
+		fifo_port_out=new("fifo_port_out",this);
+endfunction: build_phase
+
+function void connect_phase(uvm_phase phase);
+		scoreboard_port_in.connect(fifo_port_in.analysis_export);
+		scoreboard_port_out.connect(fifo_port_out.analysis_export);
+endfunction: connect_phase
+
+virtual function goldenoutput();
+bit sign_A;
+bit [7:0] exp_A;
+bit [22:0] manti_A;
+int sum_A = 0;
+int sum_bias_A;
+real manti_sum_A = 0;
+int exponent_A;
+real mantissa_A;
+real oper_A;
+real div_A;
+real numer_A;
+real denom_A;
+
+bit sign_B;
+bit [7:0] exp_B;
+bit [22:0] manti_B;
+int sum_B = 0;
+int sum_bias_B;
+real manti_sum_B = 0;
+int exponent_B;
+real mantissa_B;
+real oper_B;
+real div_B;
+real numer_B;
+real denom_B;
+
+		sign_A = tx_in.A[31];
+                exp_A = tx_in.A[30:23];
+                
+                for(int i = 0;i<8;i++) begin
+                       sum_A = sum_A + exp_A[i]*(2**i);
+                end
+                
+                sum_bias_A = sum_A - 127;
+                $display("sign_A = %d sum_A = %d sum_bias_A = %d\n",sign_A,sum_A,sum_bias_A);
+                exponent_A = 2**sum_bias_A;                
+                manti_A = tx_in.A[22:0];               
+                for(int i = 1; i<=23; i++) begin
+                        numer_A = manti_A[23-i];
+                        denom_A = 2**i;                        
+                        div_A = numer_A/denom_A;                        
+                	manti_sum_A = manti_sum_A + div_A; 
+                        //$display("numer_A= %f  denom_A= %f  div_A=%f  manti_sum_A= %f\n",numer_A,denom_A,div_A,manti_sum_A);                   
+                end
+                
+                mantissa_A = 1+manti_sum_A;
+                if(sign_A == 1)
+                	oper_A = (-1)*(exponent_A)*(mantissa_A);
+                else
+                	oper_A = 1*(exponent_A)*(mantissa_A);
+                $display("oper_A = %f input A = %b\n",oper_A,tx_in.A);
+
+
+
+		sign_B = tx_in.B[31];
+                exp_B = tx_in.B[30:23];
+                
+                for(int i = 0;i<8;i++) begin
+                       sum_B = sum_B + exp_B[i]*(2**i);
+                end
+                
+                sum_bias_B = sum_B - 127;
+		$display("sign_B = %d sum_B = %d sum_bias_B = %d\n",sign_B,sum_B,sum_bias_B);
+                exponent_B = 2**sum_bias_B;                
+                manti_B = tx_in.B[22:0];               
+                for(int i = 1; i<=23; i++) begin
+                        numer_B = manti_B[23-i];
+                        denom_B = 2**i;                        
+                        div_B = numer_B/denom_B;                        
+                	manti_sum_B = manti_sum_B + div_B;
+			//$display("numer_B= %f  denom_B= %f  div_B=%f  manti_sum_B= %f\n",numer_B,denom_B,div_B,manti_sum_B);                        
+                end
+                
+                mantissa_B = 1+manti_sum_B;
+                if(sign_B == 1)
+                	oper_B = (-1)*(exponent_B)*(mantissa_B);
+                else
+                	oper_B = 1*(exponent_B)*(mantissa_B);
+                $display("oper_B = %f input B = %b\n",oper_B,tx_in.B); 
+
+		
+cin_dut = tx_in.CIN;
+if(tx_in.opcode == 3'b000) begin //add
+//add
+	
+	if((sign_A == sign_B) && (sum_A == 255 && sum_B == 255))
+		vout_gold = 1;
+	else
+		vout_gold = 0;
+	
+	out_gold = oper_A+oper_B + cin_dut;
+	underflow_gold = 0;
+	div_by_zero_gold = 0;
+	zero_by_zero_gold = 0;
+	
+		
+end
+
+if(tx_in.opcode == 3'b001) begin //sub
+	
+	out_gold = oper_A - oper_B;
+	underflow_gold = 0;
+	div_by_zero_gold = 0;
+	zero_by_zero_gold = 0;
+	//vout_gold = ((oper_A[31]&(~oper_B[31])& (~out_gold[31])) + ((~oper_A[31]) & (oper_B[31])&(out_gold[31])));
+end
+
+if(tx_in.opcode == 3'b010) begin //mul
+	if((sign_A != sign_B) && (sum_A == 255 && sum_B == 255))
+		vout_gold = 1;
+	else
+		vout_gold = 0;
+	out_gold = oper_A * oper_B;
+   	
+	underflow_gold = 0;
+	div_by_zero_gold = 0;
+	zero_by_zero_gold = 0;
+	if(sum_A + sum_B > 255)
+		vout_gold = 1;
+	else
+		vout_gold = 0;
+end
+
+if(tx_in.opcode == 3'b011) begin //div
+	out_gold = oper_A/oper_B;
+        diff = sum_A - sum_B;
+        if(diff <0)
+        	diff =( -1)*diff;
+        else
+		diff = diff;
+	if(diff > 255)
+        	vout_gold = 1;
+	else
+		vout_gold = 0;
+	
+	if(diff < 1)
+		underflow_gold = 1;
+  	else
+		underflow_gold = 0;
+	if(oper_B == 0) begin
+        	if(oper_A == 0) begin
+			zero_by_zero_gold = 1;
+			div_by_zero_gold = 1;
+		end
+		else begin
+			div_by_zero_gold = 1;
+			zero_by_zero_gold = 0;
+		end
+	end
+	else begin
+		div_by_zero_gold = 0;
+		zero_by_zero_gold = 0;
+	end
+   		
+end
+endfunction
+
+virtual function compare_outputs();
+bit sign_out;
+bit [7:0] exp_out;
+bit [22:0] manti_out;
+int sum_out = 0;
+int sum_bias_out;
+real manti_sum_out = 0;
+real exponent_out;
+real mantissa_out;
+real out_dut;
+real div_out;
+real numer_out;
+real denom_out;		
+		
+		goldenoutput();
+                
+
+
+
+
+		sign_out = tx_out.OUT[31];
+                exp_out = tx_out.OUT[30:23];
+                
+                for(int i = 0;i<8;i++) begin
+                       sum_out = sum_out + exp_out[i]*(2**i);
+                end
+                
+                sum_bias_out = sum_out - 127;
+		$display("sign_out = %d sum_out = %d sum_bias_out = %d\n",sign_out,sum_out,sum_bias_out);
+                exponent_out = 2**sum_bias_out;                
+                manti_out = tx_out.OUT[22:0];               
+                for(int i = 1; i<=23; i++) begin
+                        numer_out = manti_out[23-i];
+                        denom_out = 2**i;                        
+                        div_out = numer_out/denom_out;                        
+                	manti_sum_out = manti_sum_out + div_out;
+			//$display("numer_out= %f  denom_out= %f  div_out=%f  manti_sum_out= %f\n",numer_out,denom_out,div_out,manti_sum_out);                        
+                end
+                
+                mantissa_out = 1+manti_sum_out;
+                if(sign_out == 1)
+                	out_dut = (-1)*(exponent_out)*(mantissa_out);
+                else
+                	out_dut = 1*(exponent_out)*(mantissa_out);
+                $display("out_dut = %f out = %b\n",out_dut,tx_out.OUT);
+
+                
+                
+		
+
+diff_in_outputs = out_dut - out_gold;
+
+$display("diff_in_outputs = %f\n",diff_in_outputs);
+                if(diff_in_outputs >= -0.001 && diff_in_outputs <= 0.001)
+				`uvm_info(get_type_name(), $sformatf("matching\n  OPCODE = %b A = %x B = %x CIN = %x\n EXPECTED OUTPUTS: OUT = %f VOUT = %x Underflow = %x div_by_zero = %x zero_by_zero = %x\n DUT OUTPUTS: OUT = %f VOUT = %x Underflow = %x div_by_zero = %x zero_by_zero = %x\n", tx_in.opcode, tx_in.A,tx_in.B, tx_in.CIN, out_gold, vout_gold, underflow_gold, div_by_zero_gold, zero_by_zero_gold,out_dut,tx_out.VOUT,tx_out.underflow,tx_out.div_by_zero,tx_out.zero_by_zero),UVM_LOW)
+		else 
+				`uvm_error(get_type_name(),$sformatf("not matching\n  OPCODE = %b A = %x B = %x CIN = %x\n EXPECTED OUTPUTS: OUT = %f  VOUT = %x Underflow = %x div_by_zero = %x zero_by_zero = %x\n DUT OUTPUTS: OUT = %f  VOUT = %x Underflow = %x div_by_zero = %x zero_by_zero = %x\n", tx_in.opcode, tx_in.A,tx_in.B, tx_in.CIN, out_gold,  vout_gold, underflow_gold, div_by_zero_gold, zero_by_zero_gold,out_dut,tx_out.VOUT,tx_out.underflow,tx_out.div_by_zero,tx_out.zero_by_zero))
+endfunction
+
+task run();
+		forever begin
+				fifo_port_in.get(tx_in);
+				//$display("time after input packet= %t\n",$time);
+				//$display("in sb opcode = %b\n",tx_in.opcode);
+				fifo_port_out.get(tx_out);
+				//$display("time afetr output packet= %t\n",$time);
+				
+				compare_outputs();
+		end
+endtask: run
+
+ 
+
+endclass: float_alu_scoreboard_c
+
+
+
+endpackage: scoreboard
